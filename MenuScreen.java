@@ -1,4 +1,8 @@
 import greenfoot. *;
+//import que and linkedlist
+import java.util.Queue; 
+import java.util.LinkedList;
+
 public class MenuScreen extends World {
     
     public MenuScreen()
