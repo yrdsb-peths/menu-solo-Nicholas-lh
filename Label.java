@@ -3,16 +3,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Label extends Actor
 {
     private GreenfootImage image;
+    private String text;
+    private int fontSize;
+    //Constructor with parameters to set lavel text and font size
     public void Label(String text, int fontSize)
     {
-        image = new GreenfootImage("buttonLong_blue.png");
-        setImage(image);
+        this.text = text;
+        this.fontSize = fontSize;
+        updateImage();
     }
     
     public void setValue(String text)
     {
-        image.clear();
-        image = new GreenfootImage(text, 24, Color.BLACK, new Color(0,0,0,0));
+        this.text = text;
+        updateImage();
+    }
+    
+    private void updateImage()
+    {
+        image = new GreenfootImage(text, fontSize, Color.BLUE, new Color(0,0,0,0));
         setImage(image);
     }
 }
