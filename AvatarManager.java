@@ -14,4 +14,29 @@ public class AvatarManager extends Actor
         
         current = avatars.remove();
     }
+    
+    @Override
+    protected void addedToWorld(World world)
+    {
+        world.addObject(new Button (this::next, "Next Avatar"), world.getWidth() / 2, world.getHeight() - 50);
+        updateAvatar();
+    }
+    
+    private void updateAvatar(){
+        int x = 300; 
+        int y = 100; 
+        World world = getWorld();
+        if(current != null)
+        {
+            world.removeObject(current);
+        }
+        world.addObject(current, x, y);
+    }
+    
+    public void next()
+    {
+        avatars.add(current);
+        current = avatars.remove();
+        updateAvatar();
+    }
 }
