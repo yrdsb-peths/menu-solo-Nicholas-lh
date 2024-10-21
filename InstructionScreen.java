@@ -4,7 +4,7 @@ public class InstructionScreen extends World {
     //maintings a reference to the MenuScreen instance that was created.
     //menu is a variable name
     private String[] instructions;
-    private System.Logger.Level instructionLabel;
+    private Label instructionLabel;
     private int currentIndex; 
     private Button nextButton;
     private Button prevButton;
@@ -19,7 +19,7 @@ public class InstructionScreen extends World {
         };
         currentIndex = 0;
         
-        instructionLabel = new Label (instructions[currentIndex], 24);
+        instructionLabel = new Label(instructions[currentIndex], 24);
         addObject(instructionLabel, 300, 200);
         
         nextButton = new Button(this::nextInstruction, "Next");

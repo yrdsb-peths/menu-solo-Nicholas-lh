@@ -1,27 +1,25 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
-public class Label extends Actor
-{
+public class Label extends Actor {
     private GreenfootImage image;
-    private String text;
-    private int fontSize;
-    //Constructor with parameters to set lavel text and font size
-    public void Label(String text, int fontSize)
-    {
+    private String text;           
+    private int fontSize;       
+
+    // Constructor to initialize label with text and font size
+    public Label(String text, int fontSize) {
         this.text = text;
         this.fontSize = fontSize;
-        updateImage();
+        updateImage();  
     }
-    
-    public void setValue(String text)
-    {
+
+    public void setValue(String text) {
         this.text = text;
-        updateImage();
+        updateImage();  
     }
-    
-    private void updateImage()
-    {
-        image = new GreenfootImage(text, fontSize, Color.BLUE, new Color(0,0,0,0));
-        setImage(image);
+
+    // Method to update the label's image based on the current text and font size
+    private void updateImage() {
+        image = new GreenfootImage(text, fontSize, Color.BLACK, new Color(0, 0, 0, 0));
+        setImage(image);  // Set the updated image to the actor
     }
 }
