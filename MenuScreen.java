@@ -9,8 +9,8 @@ public class MenuScreen extends World {
     {
         super(600, 400, 1);
         
-        addObject(new Button(this::goInstructions, "Instructions "), 300, 340);
-        
+        Button instructionButton = new Button (this:: goInstructions, "Instructions", "buttonLong_blue.png");
+        addObject(instructionButton, 300, 200);
         avatarManager = new AvatarManager();
         addObject(avatarManager, 300, 200); 
     }
