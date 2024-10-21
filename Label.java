@@ -19,7 +19,7 @@ public class Label extends Actor {
 
     // Method to update the label's image based on the current text and font size
     private void updateImage() {
-        image = new GreenfootImage(text, fontSize, Color.BLACK, new Color(0, 0, 0, 0));
+        image = new GreenfootImage(text, fontSize, Color.BLUE, new Color(0, 0, 0, 0));
         setImage(image);  // Set the updated image to the actor
     }
 }
