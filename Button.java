@@ -3,11 +3,12 @@ import greenfoot.*;
 public class Button extends Actor
 {
     private Runnable action;
-    
-    public Button(Runnable action)
+    private String label;
+    public Button(Runnable action, String label)
     {
         this.action = action;
-        GreenfootImage image = new GreenfootImage("images/buttonLong_beige.png");
+        this.label = label;
+        GreenfootImage image = new GreenfootImage("buttonLong_beige.png");
         setImage (image);
     }
     
