@@ -10,7 +10,10 @@ public class Button extends Actor
         this.action = action;
         this.label = label;
         GreenfootImage image = new GreenfootImage(imageFile);
+        image.setFont(new Font("Arial", true, false, 20));
         setImage (image);
+        image.drawString(label, image.getWidth() / 2 - 50, image.getHeight() / 2);
+        setImage(image);
     }
     
     public void act()
